@@ -34,7 +34,7 @@ Then open http://localhost:8501 and enter flight details to get a price predicti
 #### 1. **Actual vs. Predicted Prices** (Linear Regression)
 Shows how well the model's predictions align with real prices. The scatter plot shows Linear Regression captures the general trend but with more spread.
 
-![Linear Regression Predictions](lr.png)
+![Linear Regression Predictions](results/lr.png)
 
 #### 2. **Random Forest Analysis: Partial Dependence Plots**
 Shows which features most influence price predictions:
@@ -43,7 +43,7 @@ Shows which features most influence price predictions:
 - **Total Stops:** Increases with each stop (direct flights cheapest)
 - **Meal Service:** Flights with meal restrictions cost less
 
-![Random Forest Feature Analysis](rf.png)
+![Random Forest Feature Analysis](results/rf.png)
 
 #### 3. **XGBoost Interpretability: SHAP Summary Plot**
 Shows which features contribute most to predictions:
@@ -51,14 +51,14 @@ Shows which features contribute most to predictions:
 - **Red/Blue colors:** Red = higher values increase price; Blue = lower values increase price
 - Example: Longer duration → higher price (red dots on right)
 
-![XGBoost SHAP Analysis](xgb.png)
+![XGBoost SHAP Analysis](results/xgb.png)
 
 #### 4. **AdaBoost Boosting Process**
 Shows how AdaBoost iteratively improves by focusing on harder examples:
 - **Decreasing weights:** Estimator importance drops over 100 rounds
 - **Why it underperformed:** Struggled to fit this data (regression easier with RF/XGBoost)
 
-![AdaBoost Boosting Progression](adab.png)
+![AdaBoost Boosting Progression](results/adab.png)
 
 ---
 
